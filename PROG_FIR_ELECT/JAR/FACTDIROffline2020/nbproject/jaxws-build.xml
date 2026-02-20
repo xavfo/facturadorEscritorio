@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-AutorizacionComprobantesOffline" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/AutorizacionComprobantesOffline"/>
+        <property name="wsdl-AutorizacionComprobantesOffline" location="xml-resources/web-service-references/AutorizacionComprobantesOffline/wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantesOffline.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AutorizacionComprobantesOffline" destdir="${build.generated.dir}/jax-wsCache/AutorizacionComprobantesOffline" wsdl="${wsdl-AutorizacionComprobantesOffline}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantesOffline?wsdl" xnocompile="true" xendorsed="true" package="SRI.Autorizacion">
+            <depends file="${wsdl-AutorizacionComprobantesOffline}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/AutorizacionComprobantesOffline"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/AutorizacionComprobantesOffline">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-AutorizacionComprobantesOffline" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/AutorizacionComprobantesOffline"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/SRI/Autorizacion"/>
+    </target>
+    <target name="wsimport-client-RecepcionComprobantesOffline" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline"/>
+        <property name="wsdl-RecepcionComprobantesOffline" location="xml-resources/web-service-references/RecepcionComprobantesOffline/wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline" destdir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline" wsdl="${wsdl-RecepcionComprobantesOffline}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-RecepcionComprobantesOffline}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-RecepcionComprobantesOffline" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/recepcion/ws/sri/gob/ec"/>
+    </target>
+    <target name="wsimport-client-RecepcionComprobantesOffline_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline_1"/>
+        <property name="wsdl-RecepcionComprobantesOffline_1" location="xml-resources/web-service-references/RecepcionComprobantesOffline_1/wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline_1" destdir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline_1" wsdl="${wsdl-RecepcionComprobantesOffline_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline?wsdl" xnocompile="true" xendorsed="true" package="SRI.Recepcion">
+            <depends file="${wsdl-RecepcionComprobantesOffline_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-RecepcionComprobantesOffline_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/RecepcionComprobantesOffline_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/SRI/Recepcion"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-AutorizacionComprobantesOffline, wsimport-client-RecepcionComprobantesOffline, wsimport-client-RecepcionComprobantesOffline_1"/>
+</project>

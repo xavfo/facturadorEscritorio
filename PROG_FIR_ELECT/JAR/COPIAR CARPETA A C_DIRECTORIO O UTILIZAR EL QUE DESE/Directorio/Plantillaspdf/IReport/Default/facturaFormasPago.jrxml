@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="facturaInfoAdicional" pageWidth="315" pageHeight="500" columnWidth="315" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d687d131-f2c8-4202-9ec6-40df545d6d6b">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="formaPago" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="plazo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="246" y="0" width="69" height="13" uuid="ab4d88b1-ed24-44f4-b530-69b44712074a"/>
+				<textElement textAlignment="Right">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="219" height="13" uuid="77b36b7d-c4f4-4687-b23b-7aac86b1a4fb"/>
+				<textElement>
+					<font size="5"/>
+					<paragraph leftIndent="5" rightIndent="2" tabStopWidth="35"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{formaPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="0" width="15" height="13" uuid="9192da4f-14bf-4d8d-bed2-58c20f6e8c7c"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plazo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

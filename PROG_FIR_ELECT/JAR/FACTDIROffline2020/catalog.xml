@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://cel.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantes?wsdl" uri="xml-resources/web-service-references/RecepcionComprobantes/wsdl/cel.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantes.wsdl"/>
+    <system systemId="https://cel.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes?wsdl" uri="xml-resources/web-service-references/AutorizacionComprobantes/wsdl/cel.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes.wsdl"/>
+    <system systemId="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantes?wsdl" uri="xml-resources/web-service-references/RecepcionComprobantes/wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantes.wsdl"/>
+    <system systemId="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes?wsdl" uri="xml-resources/web-service-references/AutorizacionComprobantes/wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes.wsdl"/>
+    <system systemId="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantesOffline?wsdl" uri="xml-resources/web-service-references/AutorizacionComprobantesOffline/wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantesOffline.wsdl"/>
+    <system systemId="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline?wsdl" uri="xml-resources/web-service-references/RecepcionComprobantesOffline_1/wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline.wsdl"/>
+</catalog>

@@ -1,0 +1,14 @@
+
+Proyecto JAVA
+copiar carpeta en C:\FACTDIROffline2020
+
+
+Programas
+jdk-7u80-ea-bin-b05-windows-i586-20_jan_2015.exe
+jre-7u80-ea-bin-b05-windows-i586-20_jan_2015.exe
+netbeans-7.4-windows.exe
+
+Plantillas PDF
+JasperRide iReport-5.6.0
+
+

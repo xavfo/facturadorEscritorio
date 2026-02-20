@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="retencion" pageWidth="547" pageHeight="842" columnWidth="547" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a90b5cc6-9a35-48d7-a2d0-ef67a99b13b8">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="DetalleDataset" uuid="130e8edc-93b5-4d10-95d7-1f7391a3802e">
+		<field name="codigoInterno" class="java.lang.String"/>
+		<field name="codigoAdicional" class="java.lang.String"/>
+		<field name="descripcion" class="java.lang.String"/>
+		<field name="cantidad" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="DIR_PLANTILLAS" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Desarrollos\\Clientes\\Personalizaciones\\DemoJasperRide\\src\\IReport\\Default\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="identificacionDestinatario" class="java.lang.String"/>
+	<field name="razonSocialDestinatario" class="java.lang.String"/>
+	<field name="dirDestinatario" class="java.lang.String"/>
+	<field name="motivoTraslado" class="java.lang.String"/>
+	<field name="docAduaneroUnico" class="java.lang.String"/>
+	<field name="codEstabDestino" class="java.lang.String"/>
+	<field name="ruta" class="java.lang.String"/>
+	<field name="docSustento" class="java.lang.String"/>
+	<field name="numDocSustento" class="java.lang.String"/>
+	<field name="numAutDocSustento" class="java.lang.String"/>
+	<field name="fechaEmisionDocSustento" class="java.lang.String"/>
+	<field name="detalles" class="java.util.Collection"/>
+	<variable name="pagos_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<detail>
+		<band height="197">
+			<frame>
+				<reportElement style="table_TD" mode="Transparent" x="0" y="0" width="547" height="144" uuid="cf278d68-485f-402a-aa67-688be0099490"/>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="48" width="191" height="13" uuid="56fcfea4-0a38-4721-acfa-bf3a9b06975b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Destino(Punto de llegada)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="63" width="191" height="13" uuid="c49c684f-1acc-49ab-8fd0-5bc1a5076859"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Identificación (Destinatario)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="78" width="191" height="13" uuid="96192716-a9cc-4350-97bd-2c5019f59380"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Razón Social/Nombres Apellidos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="93" width="191" height="13" uuid="42cf4791-883f-40fd-be69-50ae581e396b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Documento Aduanero]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="108" width="191" height="13" uuid="e0102525-cfd0-4c39-b066-e8ce304d5079"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Código Establecimiento Destino]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="124" width="191" height="13" uuid="15688ee3-a70a-448b-b74c-c399829a81e8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Ruta:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="1" width="87" height="13" uuid="8df7d676-61de-487e-8039-7905e29c01e3"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{docSustento}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="286" y="2" width="41" height="13" uuid="58365c41-7af1-4560-9673-c9999c27d27a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numDocSustento}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="16" width="342" height="13" uuid="a2eccd74-9274-4ece-b3e1-4ca977077c8e"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numAutDocSustento}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="32" width="342" height="13" uuid="536e3822-2ef4-4815-a17d-d91f90b5d7c8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{motivoTraslado}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="48" width="342" height="13" uuid="530fb66c-e29c-43d6-96d6-75b9e8ac5c10"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dirDestinatario}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="63" width="342" height="13" uuid="86286c49-c9fc-4792-9714-1a8069e85de1"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{identificacionDestinatario}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="78" width="342" height="13" uuid="1d06e735-bb87-4351-bea4-aac0fd363832"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{razonSocialDestinatario}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="93" width="342" height="13" uuid="09d47617-1e5c-45ab-96a9-2ab56447080a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{docAduaneroUnico}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="108" width="342" height="13" uuid="2e828fd1-8b78-478a-91a9-a58e660cbbb2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{codEstabDestino}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="199" y="124" width="342" height="13" uuid="8863304c-e517-4822-be60-9faa2047d600"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ruta}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Transparent" x="327" y="2" width="126" height="13" uuid="8ec727b3-efcf-435d-847e-c47cc8556faa"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha de Emisión:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="453" y="2" width="88" height="13" uuid="665b29c2-be9a-49c6-9f5f-ee0ad7d3e15d"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fechaEmisionDocSustento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="33" width="191" height="13" uuid="9bb3933a-6643-4f6d-85c4-88cb5e56cad7"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Motivo Traslado:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="2" width="191" height="13" uuid="69e6099c-c5ca-4a21-8d03-cce99f7902bb"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Comprobante de Venta:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="8" y="17" width="191" height="13" uuid="bbd35756-5b46-49f4-8fad-8ce901cfb58d"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Número de Autorización:]]></text>
+				</staticText>
+			</frame>
+			<componentElement>
+				<reportElement key="table 2" style="table_TD" x="0" y="144" width="547" height="50" uuid="fee293a9-7b33-4bec-bc07-3e31e029731c"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DetalleDataset" uuid="06863a62-0233-4a7a-9e75-cdc10581928a">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{detalles})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="88" uuid="9c18af0d-41e8-4dc6-9e8c-49b50c51d3e3">
+						<jr:columnHeader style="table_TD" height="25" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="88" height="25" uuid="e332b1bb-3c45-4f25-92a5-1b1e9f4fddac"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cod. Interno]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="88" height="15" uuid="26bbcafe-1b67-479c-9954-024f18d86ab1"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{codigoInterno}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="65" uuid="3424d133-b0b4-43c1-ac7c-13c4c8aa53e6">
+						<jr:columnHeader style="table_TD" height="25" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="65" height="25" uuid="3538e407-a48d-4d5c-b521-f98a58ebc58b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cod. Adicional]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="65" height="15" uuid="42a6235a-0f1a-4038-8ed9-8b865a520379"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{codigoAdicional}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="342" uuid="de8e047c-e288-480f-8ffd-46946a8f238e">
+						<jr:columnHeader style="table_TD" height="25" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="342" height="25" uuid="259c49ad-159e-4615-9dd9-6647a8fae742"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Descripción]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="342" height="15" uuid="9b4f63ae-58df-4077-8e27-994773562d79"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="2c1390e1-79f2-4372-8f79-a9e0bc7f083e">
+						<jr:columnHeader style="table_TD" height="25" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="52" height="25" uuid="7f7dd65b-736f-4f75-8205-da7f965cd656"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cant]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement x="0" y="0" width="52" height="15" uuid="1b7572b6-57dc-4874-b87e-e4eb963f6c92"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

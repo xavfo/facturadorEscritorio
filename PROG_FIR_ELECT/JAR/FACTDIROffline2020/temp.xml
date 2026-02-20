@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><notaCredito id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>DUNIVERSAL</razonSocial>
+    <ruc>1792507987001</ruc>
+    <claveAcceso>1909201504179250798700110010010000900111234567819</claveAcceso>
+    <codDoc>04</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000090011</secuencial>
+    <dirMatriz>EUGENIO DE SANTILLÁN N34-280 Y MAURIÁN</dirMatriz>
+  </infoTributaria>
+  <infoNotaCredito>
+    <fechaEmision>19/09/2015</fechaEmision>
+    <dirEstablecimiento>EUGENIO DE SANTILLÁN N34-280 Y MAURIÁN</dirEstablecimiento>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>VALLEJO MAYRA</razonSocialComprador>
+    <identificacionComprador>1716241573001</identificacionComprador>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <codDocModificado>01</codDocModificado>
+    <numDocModificado>001-001-000009010</numDocModificado>
+    <fechaEmisionDocSustento>19/09/2015</fechaEmisionDocSustento>
+    <totalSinImpuestos>150.00</totalSinImpuestos>
+    <valorModificacion>168.00</valorModificacion>
+    <moneda>DOLAR</moneda>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>150.0</baseImponible>
+        <valor>18.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <motivo>Anulacion</motivo>
+  </infoNotaCredito>
+  <detalles>
+    <detalle>
+      <codigoInterno>SERVICIOS</codigoInterno>
+      <descripcion>SERVICIOS PRESTADOS </descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>150.00</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>150.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>150.00</baseImponible>
+          <valor>18.0</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">Teodoro Salem N57-73</campoAdicional>
+    <campoAdicional nombre="Telefono">0988120478</campoAdicional>
+    <campoAdicional nombre="Email">mayravvv@hotmail.com</campoAdicional>
+  </infoAdicional>
+</notaCredito>

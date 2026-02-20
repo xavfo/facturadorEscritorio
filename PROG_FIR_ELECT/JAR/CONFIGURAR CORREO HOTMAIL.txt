@@ -1,0 +1,22 @@
+GMAIL SUSPENDIO EL USO DE TERCEROS PARA ENVIO DE CORREO DE LOS DOCUMENTOS,
+SE ESTA TRABAJANDO CON HOTMAIL.
+SI HOTMAIL BLOQUEA, VA A TENER QUE UTILIZAR OTRO METODO DE ENVIO DE CORREO.
+
+
+ESTA ES LA CONFIGURACIÓN.
+
+		 RUC A TRABAJAR
+dirRechazados1234567890001 = C:\\Directorio\\Rechazados
+correoSiAutorizado1234567890001 = si
+dirNoAutorizado1234567890001 =  C:\\Directorio\\NoAutorizados
+dirAutorizados1234567890001 = C:\\Directorio\\Autorizados
+dirError1234567890001 = C:\\Directorio\\Error
+dirLogo1234567890001 = C:\\Directorio\\logo.jpg
+dirFirma1234567890001 = C:\\Directorio\\certificado.p12
+passFirma1234567890001 = CLAVE FIRMA
+servidorCorreo1234567890001 = smtp.office365.com
+puertoCorreo1234567890001 = 587
+correoRemitente1234567890001 = CORREO@hotmail.com
+correoPass1234567890001 = CLAVE DE CORREO
+correoAsunto1234567890001 = Comprobante Emitido Electrónicamente por EMPRESA NOMBRE COMERCIAL
+

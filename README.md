@@ -1,6 +1,6 @@
-Instrucciones extraídas de los archivos de texto del proyecto
+#Facturador Java de Escritorio
 
-- Nota: no se modificaron el programa ni sus ubicaciones.
+- Instalación Manual
 
 1) PROG_FIR_ELECT - Herramientas y descargas
 - Netbeans
